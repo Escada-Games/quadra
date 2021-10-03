@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/tetris/tetrimino.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/tetris/tetrimino.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 4 )
+
+[node name="s-piece" type="RigidBody2D"]
+modulate = Color( 0.262745, 0.341176, 0.678431, 1 )
+position = Vector2( 54, 29 )
+script = ExtResource( 2 )
+
+[node name="tetrimino" parent="." instance=ExtResource( 1 )]
+position = Vector2( -8, 4 )
+shape = SubResource( 1 )
+
+[node name="tetrimino2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 4 )
+shape = SubResource( 1 )
+
+[node name="tetrimino3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -4 )
+shape = SubResource( 1 )
+
+[node name="tetrimino4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 8, -4 )
+shape = SubResource( 1 )
